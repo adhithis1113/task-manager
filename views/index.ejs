@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header><h1>📝 Task Manager</h1></header>
+
+  <main>
+    <section class="form-box">
+      <h2>Add a New Task</h2>
+      <form action="/add" method="POST">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="e.g. Finish assignment" required>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4" placeholder="Write the details here..."></textarea>
+
+        <button type="submit">Save Task</button>
+      </form>
+    </section>
+
+    <h2>Your Tasks</h2>
+    <% if (tasks.length === 0) { %>
+      <p class="empty">No tasks yet. Add your first one above!</p>
+    <% } else { %>
+      <div class="cards">
+        <% tasks.forEach(function(task) { %>
+          <div class="card">
+            <h3><%= task.title %></h3>
+            <p>
+              <%= task.description.length > 100
+                    ? task.description.substring(0, 100) + '...'
+                    : task.description %>
+            </p>
+            <a class="read-more" href="/task/<%= task.id %>">Read More →</a>
+          </div>
+        <% }); %>
+      </div>
+    <% } %>
+  </main>
+</body>
+</html>

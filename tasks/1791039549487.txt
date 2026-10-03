@@ -1,0 +1,2 @@
+prepare for node.js viva
+Revise how Express routes work, including GET and POST. Understand how req.body reads form data and how req.params reads the id from the URL. Practice explaining fs.writeFile, fs.readdir and fs.readFile with examples. Also review how EJS displays dynamic data in HTML pages and why the file system is used here instead of a database.

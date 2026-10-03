@@ -1,0 +1,77 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+}
+
+header {
+  background: #2d6cdf;
+  color: white;
+  padding: 16px 24px;
+}
+header h1 { margin: 0; }
+
+main {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.form-box, .full-task {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.1);
+  margin-bottom: 24px;
+}
+
+label { display: block; margin: 12px 0 4px; font-weight: bold; }
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background: #2d6cdf;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover { background: #1f55b8; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.1);
+}
+.card h3 { margin-top: 0; }
+.card p { color: #555; white-space: pre-wrap; }
+
+.read-more {
+  color: #2d6cdf;
+  text-decoration: none;
+  font-weight: bold;
+}
+.read-more:hover { text-decoration: underline; }
+
+.full-text { white-space: pre-wrap; line-height: 1.6; }
+.empty { color: #777; }
